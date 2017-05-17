@@ -33,8 +33,34 @@
   ( () => {
     'use strict';
 
+    let refOffset = 0; //the amount of distance user scrolls down the page
+    let visible = true;
+    const bannerHeight = 77; //navbar's height
+    const bannerWrapper = document.querySelector('.banner-wrapper');
+    const banner = document.querySelector('.banner');
+
+    
+
     const handler = () => {
       //dom manipulation code here
+
+      const newOffset = window.scrollY; // # of px, page is scrolled vertically.
+
+      if (newOffset > bannerHeight ) {
+        //Navbar out of view
+        if (newOffset > refOffset) {
+          //scrolling down makes newOffset > refOffset -> hide Navbar.
+          animateOut();
+        } else {
+          //Scrolling UP makes newOffset < refOffset -> Slide navbar down
+          animateIn();
+        }
+        //update value to keep track of how far user has scrolled
+        refOffset = newOffset;
+      } else {
+        //Show navbar
+        banner.style.backgroundColor = 'rgba(162, 197, 35, 1)';
+      }
     };
 
     window.addEventListener('scroll', handler, false)

@@ -25,7 +25,7 @@ is scrolled up or down */
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  background: #A2C535;
+  background: rgba(162, 197, 35, 1);
   transition: all 400ms ease-in-out;
 }
 
