@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+}
+
+/*wrapper around the nav menu
+z-index to ensure it appears on top of the content */
+.banner-wrapper {
+  z-index: 100;
+  transition: all 400ms ease-in-out;
+  position: fixed;
+  width: 100%;
+}
+
+/* contains the Nav menu. changes in position & background-color
+are animated through the CSS `transtion` property when page
+is scrolled up or down */
+.banner {
+  height: 77px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background: #A2C535;
+  transition: all 400ms ease-in-out;
+}
+
+/*contains background image and text. will add a parallax effect */
+.content {
+  background: url(https://unsplash.it/1400/1400?image=699) center no-repeat;
+  background-size: cover;
+  padding-top: 100%;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sticky Navbar with Vanilla JS</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="banner-wrapper">
+      <div class="banner">
+        <div class="top">
+          <!--Navbar top row -->
+        </div>
+        <div class="nav">
+          <!--links for nav -->
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+      <!-- awesome content here -->
+    </div>
+  </div>
+
+<script>
+  //attach event handler to scroll event
+  //we'll enclose everything in an IIFE so to avoid clashes with
+  //other code running on the same page
+
+  ( () => {
+    'use strict';
+
+    const handler = () => {
+      //dom manipulation code here
+    };
+
+    window.addEventListener('scroll', handler, false)
+  })();
+</script>
+</body>
+</html>
