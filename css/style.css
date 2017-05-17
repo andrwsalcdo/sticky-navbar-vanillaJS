@@ -35,3 +35,80 @@ is scrolled up or down */
   background-size: cover;
   padding-top: 100%;
 }
+
+.top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 25px;
+  color: white;
+}
+
+.right-top {
+  text-transform: none;
+  padding-right: 10px;
+  font-size: 16px;
+}
+
+.nav {
+  width: 100%;
+  height: auto;
+}
+
+.nav ul.menu {
+  height: inherit;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  width: 50%;
+  font-size: 14px;
+}
+
+.nav ul.menu li {
+  flex: 1 1 auto;
+  height: inherit;
+  display: flex;
+  align-items: center;
+}
+
+.nav ul.menu li a, .right-top a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav ul.menu li a:hover, .right-top a:hover {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: rgba(255,255,255,0.9);
+  top: 50%;
+  position: absolute;
+  width: 100%;
+}
+
+.text p:first-child {
+  font-size: 45px !important;
+}
+
+.text p {
+  font-size: 22px;
+}
+
+@media screen and (max-width: 800px) {
+  .text p:first-child {
+    font-size: 40px;
+  }
+  .text p {
+    font-size: 17px;
+  }
+  .nav ul.menu {
+    font-size: 12px;
+  }
+}

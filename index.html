@@ -12,16 +12,31 @@
     <div class="banner-wrapper">
       <div class="banner">
         <div class="top">
-          <!--Navbar top row -->
+          <div class="logo">DemoPage</div>
+          <div class="right-top">
+            <a href="#">Login</a>
+          </div>
         </div>
         <div class="nav">
           <!--links for nav -->
+          <ul class="menu">
+            <li><a href="">Home</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">Docs</a></li>
+          </ul>
         </div>
       </div>
     </div>
 
     <div class="content">
       <!-- awesome content here -->
+      <div class="text">
+        <p>Lorem Ipsum</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Quisque velit nisi, pretium ut lacinia in, elementum id enim.</p>
+        <p>Curabitur aliquet quam id dui posuere blandit.</p>
+      </div>
     </div>
   </div>
 
@@ -39,10 +54,24 @@
     const bannerWrapper = document.querySelector('.banner-wrapper');
     const banner = document.querySelector('.banner');
 
-    
+    function animateOut() {
+      bannerWrapper.style.transform = `translateY(-${bannerHeight}px)`;
+      bannerWrapper.style.mstransform = `translateY(-${bannerHeight}px)`;
+      bannerWrapper.style.webkittransform = `translateY(-${bannerHeight}px)`;
+      bannerWrapper.style.Moztransform = `translateY(-${bannerHeight}px)`;
+      banner.style.background = 'rgba(162, 197, 35, 0.4)';
+    }
+
+    function animateIn() {
+      bannerWrapper.style.transform = `translateY(0px)`;
+      bannerWrapper.style.mstransform = `translateY(0px)`;
+      bannerWrapper.style.webkittransform = `translateY(0px)`;
+      bannerWrapper.style.Moztransform = `translateY(0px)`;
+      banner.style.background = 'rgba(162, 197, 35, 0.4)';
+    }
 
     const handler = () => {
-      //dom manipulation code here
+      //dom manipulation code hereS
 
       const newOffset = window.scrollY; // # of px, page is scrolled vertically.
 
